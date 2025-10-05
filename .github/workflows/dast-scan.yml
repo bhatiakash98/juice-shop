@@ -37,7 +37,7 @@ jobs:
 
   # Step 6 : Run the OWASP ZAP BAseline Scan 
       - name: ZAP Baseline scan 
-        uses: zaproxy/action-basline@v0.10.0
+        uses: zaproxy/action-baseline@v0.10.0
         with: 
       # Target the locally running application 
           target: 'http://localhost:3000'
