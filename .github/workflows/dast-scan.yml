@@ -54,7 +54,7 @@ jobs:
         with: 
       # Target the locally running application 
           target: 'http://localhost:3000'
-          cmd_options: '-J report.json'
+          cmd_options: '-J ${{ github.workspace }}/report.json'
  
   #Step 7: upload the zap report as a workflow artificat 
  #     - name: Upload ZAP Report 
@@ -73,4 +73,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zap-scan-report
-          path: report.json
+          path: ${{ github.workspace }}/report.json
