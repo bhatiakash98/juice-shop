@@ -46,7 +46,7 @@ jobs:
   #Step 7: upload the zap report as a workflow artificat 
       - name: Upload ZAP Report 
         if: always() # will ensure this step runs even if the zap scan fails to the build 
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: zap-scan-report
           path: report.json
