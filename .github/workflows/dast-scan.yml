@@ -66,7 +66,7 @@ jobs:
 
       - name: List file in workspace 
         if: always() # will ensure this step runs even if the zap scan fails to the build 
-        run: ls - IR 
+        run: ls -IR 
 
       - name: Upload ZAP Report
         if: always()
